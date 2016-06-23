@@ -1,0 +1,57 @@
+/* # Media Queries
+---------------------------------------------------------------------------------------------------- */
+
+@media only screen and (max-width: 1340px) {
+
+	.site-inner,
+	.wrap {
+		max-width: 1140px;
+	}
+
+	.content-sidebar-sidebar .content-sidebar-wrap,
+	.sidebar-content-sidebar .content-sidebar-wrap,
+	.sidebar-sidebar-content .content-sidebar-wrap {
+		/* width: 920px; */
+		@include structure(920, 1140);
+	}
+
+	.content,
+	.site-header .widget-area {
+		/* width: 800px; */
+		@include structure(800, 1140);
+	}
+
+	.sidebar-content-sidebar .content,
+	.sidebar-sidebar-content .content,
+	.content-sidebar-sidebar .content {
+		/* width: 580px; */
+		@include structure(580, 920);
+	}
+
+	.sidebar-primary {
+		/* width: 300px; */
+		@include structure(300, 1140);
+	}
+	
+	.content-sidebar-sidebar .content-sidebar-wrap .sidebar-primary,
+	.sidebar-content-sidebar .content-sidebar-wrap .sidebar-primary,
+	.sidebar-sidebar-content .content-sidebar-wrap.sidebar-primary,
+	.sidebar-sidebar-content .sidebar-primary {
+		@include structure(300, 920);
+	}
+	
+	.sidebar-secondary {
+		@include structure(180, 1140);
+	}
+
+	.footer-widgets-1,
+	.footer-widgets-2,
+	.footer-widgets-3 {
+		width: 340px;
+	}
+
+	.footer-widgets-1 {
+		margin-right: 60px;
+	}
+
+}

@@ -1,0 +1,51 @@
+/* # Plugins
+---------------------------------------------------------------------------------------------------- */
+
+/* ## Genesis eNews Extended
+--------------------------------------------- */
+
+.sidebar .enews-widget,
+.sidebar .enews-widget .widget-title {
+	color: $color-white;
+}
+
+.sidebar .widget.enews-widget {
+	background-color: tint($color-black, 20%);
+}
+
+.sidebar .enews-widget input,
+.sidebar .enews-widget input:focus {
+	border: 1px solid tint($color-black, 20%);
+}
+
+.sidebar .enews-widget input[type="submit"] {
+	background-color: $color-signal;
+	color: $color-white;
+}
+
+.sidebar .enews-widget input:hover[type="submit"],
+.sidebar .enews-widget input:focus[type="submit"]  {
+	background-color: $color-white;
+	color: tint($color-black, 20%);
+}
+
+.enews-widget input {
+	@include font(1.6, 2.4);
+	margin-bottom: 16px;
+}
+
+.enews-widget input[type="submit"] {
+	margin: 0;
+	width: 100%;
+}
+
+.enews form + p {
+	margin-top: 24px;
+}
+
+/* ## Jetpack
+--------------------------------------------- */
+
+#wpstats {
+	display: none;
+}

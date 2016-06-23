@@ -1,0 +1,120 @@
+	/*
+	MIXINS
+	---------------------------------------------------------------------------------------------------- */
+	
+	/* Colours
+	--------------------------------------------- */
+	
+	/* White */
+	$color-white: #ffffff;
+	$color-black_rgb: rgba(255, 255, 255, 1) ; /* White */
+	
+	/* Black */
+	$color-black: #000000; /* Black */
+	$color-black_rgb: rgba(0, 0, 0, 1); /* Black */
+	
+	/* Signal */
+	$color-signal: #c3251d;
+	$color-signal_rgb: rgba(223, 225, 223, 1);
+	
+	/* Black */
+	$color-primary-one: #181716; /* 100% black */
+	$color-primary-one_rgb: rgba(24, 23, 22, 1) ; /* black */
+	
+	/* Red */
+	$color-primary-two: #460023; /* 100% black */
+	$color-primary-two_rgb: rgba(70, 0, 35, 1) ; /* black */
+	
+	/* Typography
+	--------------------------------------------- */
+	
+	/* Primary Font Faminly */
+	$font-bread: 'Source Sans Pro', sans-serif;
+	$font-headlines: 'Source Sans Pro', sans-serif;
+	
+	/* $font-headlines: CelesteWeb-Book, sans-serif; */
+	
+	/* Basic Font Sizes mixin */
+	@mixin font-size($sizeValue: 1.6) {
+	  font-size: ($sizeValue * 10) + px;
+	  font-size: $sizeValue + rem;
+	}
+	
+	@mixin line-height($lineheight: 1.6) {
+	  line-height:($lineheight * 10) + px;
+	  line-height:$lineheight + rem;
+	}
+	
+	@mixin font($fontsize: 1.6, $lineheight: 1.6) {
+	  font-size: ($fontsize * 10) + px;
+	  font-size: $fontsize + rem;
+	  line-height:($lineheight * 10) + px;
+	  line-height:$lineheight + rem;
+	}
+	
+	p.standard {
+		@include font(1.8, 2.6);
+	}
+	
+	/* Border Radius
+	--------------------------------------------- */
+	
+	@mixin corners($radius){
+		-webkit-border-radius: $radius + px;
+		   -moz-border-radius: $radius + px;
+				border-radius: $radius + px;
+	}
+	
+	/* Gradients
+	--------------------------------------------- */
+	
+	@mixin linear-gradient($from, $to) {
+		/* Fallback for sad browsers */
+		background-color: $to;
+		/* Mozilla Firefox */
+		background-image:-moz-linear-gradient($from, $to);
+		/* Opera */
+		background-image:-o-linear-gradient($from, $to);
+		/* WebKit (Safari 4+, Chrome 1+) */
+		background-image:-webkit-gradient(linear, left top, left bottom, color-stop(0, $from), color-stop(1, $to));
+		/* WebKit (Chrome 11+) */
+		background-image: -webkit-linear-gradient($from, $to);
+		/* IE10 */
+		background-image: -ms-linear-gradient($from, $to);
+		/* W3C */
+		background-image: linear-gradient($from, $to);
+	}
+	
+	/* Grid
+	--------------------------------------------- */
+	
+	/* Grid mixin */
+	@mixin collwidth($colls, $margin, $target) {
+	  width: ((($target - (($colls) * $margin)) / $colls) / $target) * 100%;
+	  margin-right: (($margin / $target / 2) * 100%);
+	  margin-left: (($margin / $target / 2) * 100%);
+	}
+	
+	@mixin grid($colls, $margin, $target) {
+	  width: ((($target - (($colls - 1) * $margin)) / $colls) / $target) * 100%;
+	  &:nth-child(n) {
+		margin-right: (($margin / $target) * 100%);
+	  }
+	  &:nth-child(#{$colls}n) {
+		margin-right: 0;
+	  }
+	}
+	
+	@mixin grid_alt($colls, $margin, $target) {
+	  width: ((($target - (($colls - 1) * $margin)) / $colls) / $target) * 100%;
+	  &:nth-child(n) {
+		margin-right: (($margin / $target) * 100%);
+	  }
+	  &:nth-child(#{($colls + 1)}n) {
+		margin-right: 0;
+	  }
+	}
+	
+	@mixin structure($width, $target) {
+		width: ($width / $target * 100%);
+	}

@@ -1,0 +1,127 @@
+/*
+	Theme Name: Mobile first mono voce
+	Theme URI: http://www.monovoce.com/
+	Description: This is a mobile first starter theme created for the Genesis Framework.
+	Author: mono voce aps
+	Author URI: http://www.monovoce.com/
+
+	Version: 1.0.0
+
+	Tags: mobile first
+
+	Template: genesis
+	Template Version: 2.2.3
+
+	License: GPL-2.0+
+	License URI: http://www.gnu.org/licenses/gpl-2.0.html
+*/
+
+/* # Table of Contents
+- HTML5 Reset
+	- Baseline Normalize
+	- Box Sizing
+	- Float Clearing
+*/
+	@import "reset";
+/*
+- Mixins
+*/
+	@import "mixins";
+	@import "tint_shade";
+/*
+- Defaults
+	- Typographical Elements
+	- Headings
+	- Objects
+	- Forms
+	- Tables
+	- Screen Reader Text
+*/
+	@import "defaults";
+/*
+- Structure and Layout
+	- Site Containers
+	- Column Widths and Positions
+	- Grids
+*/
+	@import "structure_layout";
+	@import "structure_layout_grid";
+/*
+- Common Classes
+	- Avatar
+	- Genesis
+	- Search Form
+	- Titles
+	- WordPress
+*/
+	@import "common_classes";
+/*
+- Widgets
+	- Featured Content
+*/
+	@import "widgets";
+/*
+- Plugins
+	- Genesis eNews Extended
+	- Jetpack
+*/
+	@import "plugins";
+/*
+- Skip Links
+*/
+	@import "skip_links";
+/*
+- Site Header
+	- Title Area
+	- Widget Area
+*/
+	@import "site_header";
+/*
+- Site Navigation
+	- Accessible Menu
+	- Site Header Navigation
+	- After Header Navigation
+	- Footer Navigation
+*/
+	@import "site_navigation";
+/*
+- Content Area
+	- Entries
+	- Entry Meta
+	- Pagination
+	- Comments
+*/
+	@import "content_area";
+/*
+- Sidebars
+*/
+	@import "sidebars";
+/*
+- Footer Widgets
+*/
+	@import "footer_widgets";
+/*
+- Site Footer
+*/
+	@import "site_footer";
+/*
+- Media Queries
+	- Max-width: 1340px
+*/
+	@import "1340";
+/*
+	- Max-width: 1200px
+*/
+	@import "1200";
+/*
+	- Max-width: 1023px
+*/
+	@import "1023";
+/*
+	- Max-width: 860px
+*/
+	@import "860";
+/*
+- Print Styles
+*/
+	@import "print_styles";
