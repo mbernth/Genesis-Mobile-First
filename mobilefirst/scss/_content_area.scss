@@ -5,9 +5,7 @@
 --------------------------------------------- */
 
 .entry {
-	background-color: #fff;
 	margin-bottom: 40px;
-	padding: 70px 80px;
 }
 
 .entry-content ol,
@@ -30,16 +28,14 @@
 }
 
 .entry-content code {
-	background-color: #333;
-	color: #eee;
+	color: tint($color-black, 90%);
 }
 
 /* ## Entry Meta
 --------------------------------------------- */
 
 p.entry-meta {
-	font-size: 16px;
-	font-size: 1.6rem;
+	@include font(1.6, 2.4);
 	margin-bottom: 0;
 }
 
@@ -48,7 +44,7 @@ p.entry-meta {
 }
 
 .entry-footer .entry-meta {
-	border-top: 1px solid #eee;
+	border-top: 1px solid tint($color-black, 90%);
 	padding-top: 24px;
 }
 
@@ -79,12 +75,11 @@ p.entry-meta {
 }
 
 .archive-pagination a {
-	background-color: #fff;
-	color: #333;
+	background-color: $color-white;
+	color: tint($color-black, 20%);
 	cursor: pointer;
 	display: inline-block;
-	font-size: 16px;
-	font-size: 1.6rem;
+	@include font(1.6, 2.4);
 	font-weight: 600;
 	padding: 8px 12px;
 	text-decoration: none;
@@ -93,8 +88,8 @@ p.entry-meta {
 .archive-pagination a:hover,
 .archive-pagination a:focus,
 .archive-pagination .active a {
-	background-color: #c3251d;
-	color: #fff;
+	background-color: $color-signal;
+	color: $color-white;
 }
 
 /* ## Comments
@@ -103,9 +98,8 @@ p.entry-meta {
 .comment-respond,
 .entry-comments,
 .entry-pings {
-	background-color: #fff;
-	font-size: 16px;
-	font-size: 1.6rem;
+	background-color: $color-white;
+	@include font(1.6, 2.4);
 	margin-bottom: 40px;
 }
 

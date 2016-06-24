@@ -24,21 +24,18 @@
 
 /* ## Genesis
 --------------------------------------------- */
-
 .breadcrumb {
-	background-color: $color-white;
 	@include font(1.6, 2.4);
-	margin-bottom: 1px;
-	padding: 12px 30px;
+	border-bottom: 1px solid tint($color-black, 90%);
+	margin-bottom: 20px;
+	padding-bottom:20px;
 }
 
 .after-entry,
 .archive-description,
 .author-box {
-	background-color: $color-white;
 	@include font(1.8, 2.6);
 	margin-bottom: 40px;
-	padding: 60px;
 }
 
 .archive-description p:last-child,

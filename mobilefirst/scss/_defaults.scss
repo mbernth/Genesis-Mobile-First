@@ -14,7 +14,7 @@ body > div {
 }
 
 body {
-	background-color: tint($color-black, 90%);
+	background-color: tint($color-black, 99%);
 	color: tint($color-black, 20%);
 	font-family: $font-bread;
 	@include font(1.8, 2.6);

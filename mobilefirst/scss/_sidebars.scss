@@ -2,12 +2,9 @@
 ---------------------------------------------------------------------------------------------------- */
 
 .sidebar {
-	font-size: 16px;
-	font-size: 1.6rem;
+	@include font(1.6, 2.4);
 	margin-bottom: 40px;
 }
 
 .sidebar .widget {
-	background-color: #fff;
-	padding: 40px;
 }

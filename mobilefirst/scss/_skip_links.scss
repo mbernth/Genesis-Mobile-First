@@ -14,5 +14,5 @@
 /* Display outline on focus */
 :focus {
 	color: tint($color-black, 20%);
-	outline: #ccc solid 1px;
+	outline: tint($color-black, 80%) solid 1px;
 }

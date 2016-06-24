@@ -1,16 +1,9 @@
 /* # Media Queries
 ---------------------------------------------------------------------------------------------------- */
 
-@media only screen and (max-width: 860px) {
+@media only screen and (min-width: 860px) {
 
-	body > div {
-		@include font(1.8, 2.6);
-	}
-
-	body {
-		@include font(1.8, 2.6);
-	}
-
+/*
 	.site-inner {
 		padding: 5% 5% 0;
 	}
@@ -43,20 +36,7 @@
 	.archive-pagination li a {
 		margin-bottom: 4px;
 	}
+*/
 
-	.five-sixths,
-	.four-sixths,
-	.one-fourth,
-	.one-half,
-	.one-sixth,
-	.one-third,
-	.three-fourths,
-	.three-sixths,
-	.two-fourths,
-	.two-sixths,
-	.two-thirds {
-		margin: 0;
-		width: 100%;
-	}
-
+	
 }

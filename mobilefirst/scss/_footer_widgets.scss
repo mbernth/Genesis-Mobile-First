@@ -2,9 +2,9 @@
 ---------------------------------------------------------------------------------------------------- */
 
 .footer-widgets {
-	background-color: #fff;
-	font-size: 18px;
-	font-size: 1.8rem;
+	border-top: 1px solid tint($color-black, 90%);
+	background-color: $color-white;
+	@include font(1.8, 2.6);
 	clear: both;
 	padding: 60px 0;
 }
@@ -12,18 +12,7 @@
 .footer-widgets-1,
 .footer-widgets-2,
 .footer-widgets-3 {
-	width: 380px;
-}
-
-.footer-widgets-1 {
-	margin-right: 70px;
-}
-
-.footer-widgets-1,
-.footer-widgets-2 {
-	float: left;
-}
-
-.footer-widgets-3 {
-	float: right;
+	display:block;
+	float:left;
+	@include grid(3, 40, 1280);
 }

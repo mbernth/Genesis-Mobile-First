@@ -43,9 +43,12 @@
 	- Site Containers
 	- Column Widths and Positions
 	- Grids
-*/
+
 	@import "structure_layout";
 	@import "structure_layout_grid";
+*/
+	@import "structure_layout_mobilefirst";
+	
 /*
 - Common Classes
 	- Avatar
@@ -106,21 +109,26 @@
 	@import "site_footer";
 /*
 - Media Queries
-	- Max-width: 1340px
-*/
-	@import "1340";
-/*
-	- Max-width: 1200px
-*/
-	@import "1200";
-/*
+
 	- Max-width: 1023px
 */
-	@import "1023";
+	@import "1023"; 
 /*
-	- Max-width: 860px
+	- Min-width: 860px
 */
-	@import "860";
+	@import "860"; 
+/*
+	- Min-width: 1024px
+*/
+	@import "1024"; 
+/*
+	- Min-width: 1200px
+*/
+	@import "1200"; 
+/*
+	- Min-width: 1380px
+*/
+	@import "1380"; 
 /*
 - Print Styles
 */
