@@ -50,4 +50,15 @@
 		@include grid(3, 40, 1140);
 	}
 
+/* # Footer Widgets
+---------------------------------------------------------------------------------------------------- */
+
+.footer-widgets-1,
+.footer-widgets-2,
+.footer-widgets-3 {
+	display:block;
+	float:left;
+	@include grid(3, 40, 1140);
+}
+
 }

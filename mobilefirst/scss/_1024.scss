@@ -72,5 +72,11 @@
 	.footer-widgets-3 {
 		@include grid(3, 40, 960);
 	}
+	
+	.footer-widgets-1,
+	.footer-widgets-2 {
+		border-bottom: 0px solid tint($color-black, 90%);
+		padding-bottom:0px;
+	}
 
 }

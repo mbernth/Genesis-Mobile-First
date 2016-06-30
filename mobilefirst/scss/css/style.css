@@ -1290,14 +1290,14 @@ p.entry-meta {
 .footer-widgets-3 {
   display: block;
   float: left;
-  width: 31.25%; }
+  width: 100%; }
   .footer-widgets-1:nth-child(n),
   .footer-widgets-2:nth-child(n),
   .footer-widgets-3:nth-child(n) {
-    margin-right: 3.125%; }
-  .footer-widgets-1:nth-child(3n),
-  .footer-widgets-2:nth-child(3n),
-  .footer-widgets-3:nth-child(3n) {
+    margin-right: 0%; }
+  .footer-widgets-1:nth-child(1n),
+  .footer-widgets-2:nth-child(1n),
+  .footer-widgets-3:nth-child(1n) {
     margin-right: 0; }
 
 /*
@@ -1511,6 +1511,81 @@ p.entry-meta {
 /* # Media Queries
 ---------------------------------------------------------------------------------------------------- */
 @media only screen and (min-width: 860px) {
+  /* # Table of Contents
+  - HTML5 Reset
+  	- Baseline Normalize
+  	- Box Sizing
+  	- Float Clearing
+  ---------------------------------------------------------------------------------------------------- */
+  /*
+  - Mixins
+  ---------------------------------------------------------------------------------------------------- */
+  /*
+  - Defaults
+  	- Typographical Elements
+  	- Headings
+  	- Objects
+  	- Forms
+  	- Tables
+  	- Screen Reader Text
+  ---------------------------------------------------------------------------------------------------- */
+  /*
+  - Structure and Layout
+  	- Site Containers
+  	- Column Widths and Positions
+  	- Grids
+  
+  	@import "structure_layout";
+  	@import "structure_layout_grid";
+  ---------------------------------------------------------------------------------------------------- */
+  /*
+  - Common Classes
+  	- Avatar
+  	- Genesis
+  	- Search Form
+  	- Titles
+  	- WordPress
+  ---------------------------------------------------------------------------------------------------- */
+  /*
+  - Widgets
+  	- Featured Content
+  ---------------------------------------------------------------------------------------------------- */
+  /*
+  - Plugins
+  	- Genesis eNews Extended
+  	- Jetpack
+  ---------------------------------------------------------------------------------------------------- */
+  /*
+  - Skip Links
+  ---------------------------------------------------------------------------------------------------- */
+  /*
+  - Site Header
+  	- Title Area
+  	- Widget Area
+  ---------------------------------------------------------------------------------------------------- */
+  /*
+  - Site Navigation
+  	- Accessible Menu
+  	- Site Header Navigation
+  	- After Header Navigation
+  	- Footer Navigation
+  ---------------------------------------------------------------------------------------------------- */
+  /*
+  - Content Area
+  	- Entries
+  	- Entry Meta
+  	- Pagination
+  	- Comments
+  ---------------------------------------------------------------------------------------------------- */
+  /*
+  - Sidebars
+  ---------------------------------------------------------------------------------------------------- */
+  /*
+  - Footer Widgets
+  ---------------------------------------------------------------------------------------------------- */
+  /*
+  - Site Footer
+  ---------------------------------------------------------------------------------------------------- */
   /*
   	.site-inner {
   		padding: 5% 5% 0;
@@ -1615,7 +1690,12 @@ p.entry-meta {
     .footer-widgets-1:nth-child(3n),
     .footer-widgets-2:nth-child(3n),
     .footer-widgets-3:nth-child(3n) {
-      margin-right: 0; } }
+      margin-right: 0; }
+
+  .footer-widgets-1,
+  .footer-widgets-2 {
+    border-bottom: 0px solid #e6e6e6;
+    padding-bottom: 0px; } }
 /*
 	- Min-width: 1200px
 */
@@ -1659,6 +1739,23 @@ p.entry-meta {
   .footer-widgets-1,
   .footer-widgets-2,
   .footer-widgets-3 {
+    width: 30.9941520468%; }
+    .footer-widgets-1:nth-child(n),
+    .footer-widgets-2:nth-child(n),
+    .footer-widgets-3:nth-child(n) {
+      margin-right: 3.5087719298%; }
+    .footer-widgets-1:nth-child(3n),
+    .footer-widgets-2:nth-child(3n),
+    .footer-widgets-3:nth-child(3n) {
+      margin-right: 0; }
+
+  /* # Footer Widgets
+  ---------------------------------------------------------------------------------------------------- */
+  .footer-widgets-1,
+  .footer-widgets-2,
+  .footer-widgets-3 {
+    display: block;
+    float: left;
     width: 30.9941520468%; }
     .footer-widgets-1:nth-child(n),
     .footer-widgets-2:nth-child(n),
@@ -1751,7 +1848,24 @@ p.entry-meta {
   .sidebar-secondary {
     float: left;
     /* width: 180px; */
-    width: 14.0625%; } }
+    width: 14.0625%; }
+
+  /* # Footer Widgets
+  ---------------------------------------------------------------------------------------------------- */
+  .footer-widgets-1,
+  .footer-widgets-2,
+  .footer-widgets-3 {
+    display: block;
+    float: left;
+    width: 31.25%; }
+    .footer-widgets-1:nth-child(n),
+    .footer-widgets-2:nth-child(n),
+    .footer-widgets-3:nth-child(n) {
+      margin-right: 3.125%; }
+    .footer-widgets-1:nth-child(3n),
+    .footer-widgets-2:nth-child(3n),
+    .footer-widgets-3:nth-child(3n) {
+      margin-right: 0; } }
 /*
 - Print Styles
 */
