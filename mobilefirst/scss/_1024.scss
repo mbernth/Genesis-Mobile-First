@@ -2,10 +2,47 @@
 ---------------------------------------------------------------------------------------------------- */
 
 @media only screen and (min-width: 1024px) {
-	
+/* # Table of Contents
+- HTML5 Reset
+	- Baseline Normalize
+	- Box Sizing
+	- Float Clearing
+---------------------------------------------------------------------------------------------------- */
+
+/*
+- Mixins
+---------------------------------------------------------------------------------------------------- */
+
+/*
+- Defaults
+	- Typographical Elements
+	- Headings
+	- Objects
+	- Forms
+	- Tables
+	- Screen Reader Text
+---------------------------------------------------------------------------------------------------- */
+
+/*
+- Structure and Layout
+	- Site Containers
+	- Column Widths and Positions
+	- Grids
+---------------------------------------------------------------------------------------------------- */
+
 	.site-inner,
 	.wrap {
 		max-width: 960px;
+	}
+
+	.full-width-content .breadcrumb,
+	.full-width-content .entry{
+		max-width: 960px;
+	}
+	
+	.full-width-content .content {
+		float: none;
+		width:100%;
 	}
 	
 	.content-sidebar-sidebar .content-sidebar-wrap {
@@ -22,11 +59,11 @@
 	.sidebar-content-sidebar .content {
 		float: left;
 	}
-	
+
 	.content {
 		float: right;
 	}
-
+	
 	.content-sidebar-sidebar .content-sidebar-wrap,
 	.sidebar-content-sidebar .content-sidebar-wrap,
 	.sidebar-sidebar-content .content-sidebar-wrap {
@@ -66,6 +103,124 @@
 	.content-sidebar-sidebar .sidebar-secondary {
 		float: right;
 	}
+	
+	/* ## Grid
+	--------------------------------------------- */
+	
+	.full-width-content .gridcontainer .row_headline{
+		max-width: 960px;
+	}
+	
+	.coll1,
+	.coll2,
+	.coll2_3,
+	.coll3,
+	.coll3_4,
+	.coll4,
+	.coll4_5,
+	.coll5,
+	.coll6{
+		float:left;
+	}
+	
+	.full-width-content .content .coll1,
+	.coll1 {
+		margin:0 auto 40px;
+		@include structure(960, 960);
+	}
+	.full-width-content .content .coll2,
+	.coll2 {
+		@include grid(2, 40, 960);
+	}
+	.full-width-content .content .coll2_3,
+	.coll2_3 {
+		@include grid_alt(2, 40, 960);
+	}
+	.full-width-content .content .coll3,
+	.coll3 {
+		@include grid(3, 40, 960);
+	}
+	.full-width-content .content .coll3_4,
+	.coll3_4 {
+		@include grid_alt(3, 40, 960);
+	}
+	.full-width-content .content .coll4,
+	.coll4 {
+		@include grid(4, 40, 960);
+	}
+	.full-width-content .content .coll4_5,
+	.coll4_5 {
+		@include grid_alt(4, 40, 960);
+	}
+	.full-width-content .content .coll5,
+	.coll5 {
+		@include grid(5, 40, 960);
+	}
+	.full-width-content .content .coll6,
+	.coll6 {
+		@include grid(6, 40, 960);
+	}
+	
+
+/*
+- Common Classes
+	- Avatar
+	- Genesis
+	- Search Form
+	- Titles
+	- WordPress
+---------------------------------------------------------------------------------------------------- */
+
+/*
+- Widgets
+	- Featured Content
+---------------------------------------------------------------------------------------------------- */
+
+/*
+- Plugins
+	- Genesis eNews Extended
+	- Jetpack
+---------------------------------------------------------------------------------------------------- */
+
+/*
+- Skip Links
+---------------------------------------------------------------------------------------------------- */
+
+/*
+- Site Header
+	- Title Area
+	- Widget Area
+---------------------------------------------------------------------------------------------------- */
+
+	.title-area {
+		float: left;
+		padding: 10px 0;
+		width: 300px;
+	}
+
+/*
+- Site Navigation
+	- Accessible Menu
+	- Site Header Navigation
+	- After Header Navigation
+	- Footer Navigation
+---------------------------------------------------------------------------------------------------- */
+
+/*
+- Content Area
+	- Entries
+	- Entry Meta
+	- Pagination
+	- Comments
+---------------------------------------------------------------------------------------------------- */
+
+/*
+- Sidebars
+---------------------------------------------------------------------------------------------------- */
+
+/*
+- Footer Widgets
+---------------------------------------------------------------------------------------------------- */
 
 	.footer-widgets-1,
 	.footer-widgets-2,
@@ -78,5 +233,13 @@
 		border-bottom: 0px solid tint($color-black, 90%);
 		padding-bottom:0px;
 	}
+
+/*
+- Site Footer
+---------------------------------------------------------------------------------------------------- */
+
+
+
+
 
 }

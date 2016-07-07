@@ -144,3 +144,192 @@ function genesis_sample_comments_gravatar( $args ) {
 	return $args;
 
 }
+
+//* Remove the edit link
+add_filter ( 'genesis_edit_post_link' , '__return_false' );	
+
+//* Flexible grids
+// =====================================================================================================================
+
+// check if the flexible content field has rows of data
+add_action( 'genesis_after_entry', 'mono_flexible_grids', 15 );
+function mono_flexible_grids() {
+	
+	if ( is_single() || is_page() ) {
+	
+	$loopCount = 0;
+	
+	
+	
+	if( have_rows('content_row') ):
+	
+		
+	
+		// loop through the rows of data
+    	while ( have_rows('content_row') ) : the_row();
+		
+			$headline = 	get_sub_field('row_headline');
+			$rowbutton = get_sub_field('row_button');
+			$rowbuttonmanual = get_sub_field('row_button_manual_url');
+			$rowtext = 	get_sub_field('row_button_text');
+
+        	if( get_row_layout() == 'row_setup' ):
+				
+			if (get_sub_field('hide_row')){
+				
+				}else{
+				
+				echo '<article class="gridcontainer  ';
+						the_sub_field('background_colour');
+					if (get_sub_field('row_id')){
+						echo '" id="';
+					 	the_sub_field('row_id');
+					}
+				echo '" >';
+				
+				if ($headline){
+					echo '<h1 class="row_headline">' . $headline . '</h1>';
+				}
+				
+				
+				
+				echo '<div class="wrap">';
+					
+					
+					$row = 	get_sub_field('columns');
+					$selected = get_sub_field('background_colour');
+					$content = get_sub_field('content');
+					
+					
+					while ( have_rows('column') ) : the_row();
+							
+							
+							if (get_sub_field('content')){
+							echo '<section class="coll' . $row['columns']. ' wysiwyg">';
+							
+								
+								
+							
+								the_sub_field('content');
+								
+								if (get_sub_field('button_text_content')){
+									echo '<a class="button" href="';
+										if (get_sub_field('botton_manual_link')){
+											the_sub_field('botton_manual_link');
+										}else{
+											the_sub_field('button_content');
+										}
+									echo '"><span>';
+										the_sub_field('button_text_content');
+									echo '</span></a>';
+								}
+								
+							echo '</section>';
+							}
+							
+							if (get_sub_field('widget_content')){
+							echo '<section class="coll' . $row['columns']. '">';
+								the_sub_field('widget_content');
+							echo '</section>';
+							}
+							
+							if (get_sub_field('image_link')){
+								
+								if( get_sub_field('content') && $selected == 'Non'  || $selected == 'Non Black'  || $selected == 'Non Red'  || $selected == 'Non Grey') {
+									
+									echo '<section class="coll' . $row['columns']. ' backimage" style="background-image: url(';
+										the_sub_field('image_link');
+									echo ');">';
+									echo '</section>';
+									
+									}else{
+										
+									echo '<section class="coll' . $row['columns']. '">';
+										echo '<img src="';
+											the_sub_field('image_link');
+										echo '">';
+									echo '</section>';
+										
+								}
+								
+							}
+							
+							if (get_sub_field('video_embeding_code')){
+							echo '<section class="coll' . $row['columns']. '">';
+								the_sub_field('video_embeding_code');
+							echo '</section>';
+							}
+							
+							if (get_sub_field('google_map')){
+								
+								$location = get_sub_field('google_map');
+								
+							echo '<section class="coll' . $row['columns']. '">';
+								echo '<div class="acf-map">
+		 								<div class="marker" data-lat="'.$location['lat'].'" data-lng="'.$location['lng'].'"></div>
+		 							  </div>';
+							echo '</section>';
+							}
+							
+							if (get_sub_field('case_thumbnail')){
+								
+								echo '<section class="coll' . $row['columns']. ' case_preview">';
+									echo '<a href="';
+											the_sub_field('case_link');
+									echo '">';
+									echo '<div class="thumb-image">';
+										echo '<img src="';
+											the_sub_field('case_thumbnail');
+										echo '">';
+									echo '</div>';
+									echo '</a>';
+									echo '<div class="entry-content" itemprop="text">
+											<header class="entry-header">
+											<h2 class="entry-title" itemprop="headline">
+												<a href="';
+													the_sub_field('case_link');
+												echo '" rel="bookmark">';
+													the_sub_field('case_name');
+												echo '</a>
+											</h2> 
+											</header>
+											<strong>Kunde: </strong>';
+												the_sub_field('case_client');
+											echo '</div>';
+								echo '</section>';
+								
+							}
+					
+					endwhile;
+				
+				echo '</div>';
+				
+				if ($rowtext){
+					echo '<a class="button" href="';
+					if (get_sub_field('row_button_manual_url')){
+						echo '' . $rowbuttonmanual . '';
+					}else{
+						echo '' . $rowbutton . '';
+					}
+					echo '"><span>' . $rowtext . '</span></a>';
+				}
+				
+				echo '</article>';
+			
+			}
+			endif;
+			$loopCount ++;
+			
+
+			
+    	endwhile;
+	
+	else :
+
+    // no layouts found
+
+	endif;
+	
+	}
+
+}

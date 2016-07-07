@@ -186,6 +186,10 @@
 		position: static;
 		width: 100%;
 	}
+	
+	.sub-menu li {
+		float:none;
+	}
 
 	.js .genesis-nav-menu .sub-menu .sub-menu {
 		margin: 0;
@@ -203,6 +207,8 @@
 		background-color: $color-white;
 		color: $color-signal;
 	}
+	
+	
 
 	.footer-widgets-1,
 	.footer-widgets-2 {

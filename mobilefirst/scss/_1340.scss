@@ -2,6 +2,34 @@
 ---------------------------------------------------------------------------------------------------- */
 
 @media only screen and (max-width: 1340px) {
+	
+/* # Table of Contents
+- HTML5 Reset
+	- Baseline Normalize
+	- Box Sizing
+	- Float Clearing
+---------------------------------------------------------------------------------------------------- */
+
+/*
+- Mixins
+---------------------------------------------------------------------------------------------------- */
+
+/*
+- Defaults
+	- Typographical Elements
+	- Headings
+	- Objects
+	- Forms
+	- Tables
+	- Screen Reader Text
+---------------------------------------------------------------------------------------------------- */
+
+/*
+- Structure and Layout
+	- Site Containers
+	- Column Widths and Positions
+	- Grids
+---------------------------------------------------------------------------------------------------- */
 
 	.site-inner,
 	.wrap {
@@ -43,23 +71,116 @@
 	.sidebar-secondary {
 		@include structure(180, 1140);
 	}
+	
+	/* ## Grid
+	--------------------------------------------- */
+	
+	.full-width-content .gridcontainer .row_headline{
+		max-width: 1140px;
+	}
+	
+	.full-width-content .content .coll1,
+	.coll1 {
+		@include structure(1140, 1140);
+	}
+	.full-width-content .content .coll2,
+	.coll2 {
+		@include grid(2, 40, 1140);
+	}
+	.full-width-content .content .coll2_3,
+	.coll2_3 {
+		@include grid_alt(2, 40, 1140);
+	}
+	.full-width-content .content .coll3,
+	.coll3 {
+		@include grid(3, 40, 1140);
+	}
+	.full-width-content .content .coll3_4,
+	.coll3_4 {
+		@include grid_alt(3, 40, 1140);
+	}
+	.full-width-content .content .coll4,
+	.coll4 {
+		@include grid(4, 40, 1140);
+	}
+	.full-width-content .content .coll4_5,
+	.coll4_5 {
+		@include grid_alt(4, 40, 1140);
+	}
+	.full-width-content .content .coll5,
+	.coll5 {
+		@include grid(5, 40, 1140);
+	}
+	.full-width-content .content .coll6,
+	.coll6 {
+		@include grid(6, 40, 1140);
+	}
+
+/*
+- Common Classes
+	- Avatar
+	- Genesis
+	- Search Form
+	- Titles
+	- WordPress
+---------------------------------------------------------------------------------------------------- */
+
+/*
+- Widgets
+	- Featured Content
+---------------------------------------------------------------------------------------------------- */
+
+/*
+- Plugins
+	- Genesis eNews Extended
+	- Jetpack
+---------------------------------------------------------------------------------------------------- */
+
+/*
+- Skip Links
+---------------------------------------------------------------------------------------------------- */
+
+/*
+- Site Header
+	- Title Area
+	- Widget Area
+---------------------------------------------------------------------------------------------------- */
+
+/*
+- Site Navigation
+	- Accessible Menu
+	- Site Header Navigation
+	- After Header Navigation
+	- Footer Navigation
+---------------------------------------------------------------------------------------------------- */
+
+/*
+- Content Area
+	- Entries
+	- Entry Meta
+	- Pagination
+	- Comments
+---------------------------------------------------------------------------------------------------- */
+
+/*
+- Sidebars
+---------------------------------------------------------------------------------------------------- */
+
+/*
+- Footer Widgets
+---------------------------------------------------------------------------------------------------- */
 
 	.footer-widgets-1,
 	.footer-widgets-2,
 	.footer-widgets-3 {
+		display:block;
+		float:left;
 		@include grid(3, 40, 1140);
 	}
 
-
-/* # Footer Widgets
+/*
+- Site Footer
 ---------------------------------------------------------------------------------------------------- */
 
-.footer-widgets-1,
-.footer-widgets-2,
-.footer-widgets-3 {
-	display:block;
-	float:left;
-	@include grid(3, 40, 1140);
-}
 
 }
