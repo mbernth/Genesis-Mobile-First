@@ -147,6 +147,10 @@
 	margin-bottom:0;
 }
 
+.full-width-content .gridcontainer:nth-child(2) {
+	padding-top:0;
+}
+
 .full-width-content .gridcontainer.Black {
 	background-color:$color-black;
 	color:tint($color-black, 90%);
